@@ -13,16 +13,22 @@
   "license": "MIT",
   "author": "Abdul Azis <https://github.com/azis0x>",
   "scripts": {
-    "prepare": "husky"
-  },
-  "engines": {
-    "node": ">=24"
+    "dev": "concurrently -n CLIENT,SERVER -c green,cyan \"pnpm --filter client dev\" \"pnpm --filter server dev\"",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint",
+    "lint:fix": "pnpm -r lint:fix",
+    "typecheck": "pnpm -r typecheck"
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.7.1",
+    "concurrently": "^9.2.1",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
     "prettier": "^3.8.1",
     "prettier-plugin-tailwindcss": "^0.7.2"
+  },
+  "packageManager": "pnpm@10.28.2",
+  "engines": {
+    "node": ">=24"
   }
 }
