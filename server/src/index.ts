@@ -1,5 +1,6 @@
 import { DEFAULT_PORT, NODE_ENV } from "@/constants"
 import { logger } from "@/lib/logger"
+import { errorHandler, notFound } from "@/middleware/error-handler"
 import { httpLogger } from "@/middleware/http-logger"
 import cookieParser from "cookie-parser"
 import cors from "cors"
@@ -20,6 +21,9 @@ app.get("/", (_req, res) => {
   res.setHeader("Content-Type", "text/html")
   return res.send("OK")
 })
+
+app.use(notFound)
+app.use(errorHandler)
 
 app.listen(DEFAULT_PORT, () => {
   logger.info({ NODE_ENV, DEFAULT_PORT }, "server is running")

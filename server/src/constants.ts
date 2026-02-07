@@ -41,8 +41,10 @@ export const HTTP_FORBIDDEN = 403
 export const HTTP_NOT_FOUND = 404
 export const HTTP_CONFLICT = 409
 export const HTTP_UNPROCESSABLE_ENTITY = 422
+export const HTTP_TOO_MANY_REQUESTS = 429
 
 export const HTTP_INTERNAL_SERVER_ERROR = 500
+export const HTTP_SERVICE_UNAVAILABLE = 503
 
 export type HTTPStatusCode =
   | typeof HTTP_OK
@@ -54,12 +56,15 @@ export type HTTPStatusCode =
   | typeof HTTP_NOT_FOUND
   | typeof HTTP_CONFLICT
   | typeof HTTP_UNPROCESSABLE_ENTITY
+  | typeof HTTP_TOO_MANY_REQUESTS
   | typeof HTTP_INTERNAL_SERVER_ERROR
+  | typeof HTTP_SERVICE_UNAVAILABLE
 
 export const PAGINATION_DEFAULT_PAGE = 1
 export const PAGINATION_DEFAULT_LIMIT = 20
 export const PAGINATION_MAX_LIMIT = 100
 
+export const JWT_ALG = "HS256"
 export const ACCESS_TOKEN_TTL = "15m"
 export const REFRESH_TOKEN_TTL = "30d"
 
