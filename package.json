@@ -1,0 +1,28 @@
+{
+  "name": "ehho",
+  "version": "0.1.0",
+  "description": "Let's get things done, ehho!",
+  "homepage": "https://github.com/azis0x/ehho#readme",
+  "bugs": {
+    "url": "https://github.com/azis0x/ehho/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azis0x/ehho.git"
+  },
+  "license": "MIT",
+  "author": "Abdul Azis <https://github.com/azis0x>",
+  "scripts": {
+    "prepare": "husky"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.7.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.8.1",
+    "prettier-plugin-tailwindcss": "^0.7.2"
+  }
+}
